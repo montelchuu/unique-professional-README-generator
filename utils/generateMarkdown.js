@@ -46,14 +46,49 @@ function renderLicenseLink(license) {
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
   let licenseSection = "";
-  licenseSection = "license: ${license}";
+  licenseSection = `license: ${license}`;
   return licenseSection;
 }
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
-  return `# ${data.title}
-  
+  return `
+  # ${data.title}
+  ### ${renderLicenseSection(data.license)} ${renderLicenseBadge(data.license)}
+
+  ### Github URL: [${data.github}](https://github.com/${data.github}/)
+
+  # Description
+  ${data.description}
+
+  # Table of Contents
+  * [Installations](#installations)
+  * [Usage](#usage)
+  * [License](#license)
+  * [Contributing](#contributing)
+  * [Tests](#tests)
+  * [Questions](#questions)
+
+  # Installations
+  Run these commands for installations: ${data.installations}
+
+  # Usage
+  ${data.usage}
+
+  # License
+  Lincenses are listed as the following:
+  ### ${renderLicenseSection(data.license)} ${renderLicenseBadge(data.license)}
+  ### ${renderLicenseLink(data.license)}
+
+  # Contributing
+  ${data.contributors}
+
+  # Test
+  Run these commands for installations:
+  ${data.test}
+
+  # Questions
+  For further questions, please email ${data.email}.
 `;
 }
 
