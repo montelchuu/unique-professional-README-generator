@@ -81,7 +81,7 @@ function generateMarkdown(data) {
   ### ${renderLicenseLink(data.license)}
 
   # Contributing
-  ${data.contributors}
+  ${data.contributing}
 
   # Test
   Run these commands for installations:
