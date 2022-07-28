@@ -84,7 +84,7 @@ function generateMarkdown(data) {
   ${data.contributing}
 
   # Test
-  Run these commands for installations:
+  Run these commands for tests:
   ${data.test}
 
   # Questions
